@@ -1,0 +1,25 @@
+<html>
+<head>
+<script src="https://hcheedella4-dev-ed.my.site.com/lightning/lightning.out.js"/>
+<script>
+  $Lightning.use(
+      "c:lightningOutDemoApp", // name of the Lightning app
+      function () {
+          // Callback once framework and app loaded
+          $Lightning.createComponent(
+              "c:lightningOutDemoComponent", // top-level component of your app
+              {}, // attributes to set on the component when created
+              "lightningLocator", // the DOM location to insert the component
+              function (cmp) {
+                  console.log('component created ');
+              },
+          );
+      },
+      "https://hcheedella4-dev-ed.my.site.com",
+  );
+</script>
+</head>
+<body>
+<div id="lightningLocator"/>
+</body>
+</html>
